@@ -1,0 +1,35 @@
+const int waterSensorPin = A0;
+const int ledPin1 = 13;  
+const int ledPin2 = 12;
+const int ledPin3 = 11;
+
+void setup() {
+  pinMode(ledPin1, OUTPUT);
+  pinMode(ledPin2, OUTPUT);
+  pinMode(ledPin3, OUTPUT);
+} 
+
+void loop() {
+  int sensorValue = analogRead(waterSensorPin);
+
+  if(sensorValue < 350) {
+    flashLed(ledPin1); 
+  }
+  else if(sensorValue < 450) {
+    flashLed(ledPin2);
+  }
+  else {
+    flashLed(ledPin3);
+  }
+
+  delay(100);
+}
+
+void flashLed(int ledPin) {
+  for(int i=0; i<10; i++) { 
+    digitalWrite(ledPin, HIGH);
+    delay(100);
+    digitalWrite(ledPin, LOW);
+    delay(100);
+  }
+}
