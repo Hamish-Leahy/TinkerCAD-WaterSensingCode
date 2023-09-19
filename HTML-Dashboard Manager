@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Water Monitoring Dashboard</title>
+<style>
+
+body {
+  font-family: "SF Pro Display", "Segoe UI", sans-serif;
+  margin: 40px;
+}
+
+.header {
+  display: flex;
+  align-items: center;  
+}
+
+.header h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-right: 20px; 
+}
+
+.sensor-card {
+  background: #f2f2f7;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.sensor-name {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.sensor-value {
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 5px;  
+}
+
+.sensor-units {
+  color: #888;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>My Garden</h1>
+  <img src="leaf.svg" width="32" height="32">  
+</div>
+
+<div class="sensor-card">
+  <div class="sensor-name">Water Level</div>
+  <div class="sensor-value">248</div>
+  <div class="sensor-units">ml</div>
+</div>
+
+<div class="sensor-card">
+  <div class="sensor-name">Soil Moisture</div>
+  <div class="sensor-value">35</div>
+  <div class="sensor-units">%</div>  
+</div>
+
+</body>
+</html>
